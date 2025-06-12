@@ -1,0 +1,179 @@
+{
+  "course": {
+    "title": "Escenarios para aprender con IA",
+    "subtitle": "Segundo Encuentro Sincrónico",
+    "description": "Curso de formación docente en inteligencia artificial aplicada a la educación",
+    "duration": "2 horas",
+    "date": "Por definir"
+  },
+  "moments": [
+    {
+      "id": 1,
+      "title": "Primero - Revisamos nuestro camino",
+      "description": "En este primer momento, revisaremos el camino recorrido hasta ahora en nuestro curso, explorando las bitácoras, el trabajo grupal, los modos de comunicación y evaluación.",
+      "subsections": [
+        {
+          "title": "Diálogo con uno mismo ¿qué es la bitácora?",
+          "content": "Espacio personal y reflexivo donde se cruzan experiencias, pensamientos y emociones vividas en el trayecto formativo con inteligencia artificial.",
+          "links": [
+            {
+              "text": "Ver ejemplo de bitácora",
+              "url": "https://ead.uncu.edu.ar/mod/assign/view.php?id=16888"
+            }
+          ]
+        },
+        {
+          "title": "Diálogo con colegas y con la IA",
+          "content": "El trabajo grupal es paralelo y simultáneo al diálogo individual en las bitácoras.",
+          "links": [
+            {
+              "text": "Ver ejemplo de trabajo grupal",
+              "url": "https://ead.uncu.edu.ar/course/view.php?id=1167&section=3"
+            }
+          ]
+        },
+        {
+          "title": "Modos de comunicación en el trayecto",
+          "content": "Exploración de los diferentes canales de comunicación utilizados en el curso, incluyendo Telegram y sus funcionalidades."
+        },
+        {
+          "title": "Modos de evaluación",
+          "content": "Características de la evaluación formativa y de proceso del curso.",
+          "links": [
+            {
+              "text": "Ver calificaciones en el aula",
+              "url": "https://ead.uncu.edu.ar/grade/report/user/index.php?id=1167"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "SEGUNDO MOMENTO - Jugamos? y luego dialogamos",
+      "description": "Trabajaremos de manera 'colectiva' para resolver desafíos que pondrán a prueba nuestra capacidad de distinguir entre productos culturales creados por humanos y aquellos generados por IA.",
+      "activities": [
+        {
+          "type": "timer",
+          "title": "Desafío de Observación",
+          "description": "Actividad contra reloj para distinguir contenido humano vs. IA"
+        },
+        {
+          "type": "collaboration",
+          "title": "Co-creación Colaborativa",
+          "description": "Elección de uno de tres desafíos para crear y jugar con el curso"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "TERCER MOMENTO - Ahora Desafío grupal!!! A crear",
+      "description": "Aquí crearemos un tragamonedas interactivo para sortear números de grupos que trabajarán juntos. El sistema tiene tres barras verticales con números del 1 al 18, y realizará 6 sorteos para que todos participen.",
+      "features": [
+        {
+          "type": "slot_machine",
+          "title": "Sorteo de Grupos",
+          "description": "Tragamonedas interactivo para formar grupos de trabajo"
+        },
+        {
+          "type": "meeting_links",
+          "title": "Enlaces a Reuniones por Grupo",
+          "links": [
+            {
+              "group": 1,
+              "url": "https://meet.jit.si/escenario-ia-1"
+            },
+            {
+              "group": 2,
+              "url": "https://meet.jit.si/escenario-ia-2"
+            },
+            {
+              "group": 3,
+              "url": "https://meet.jit.si/escenario-ia-3"
+            },
+            {
+              "group": 4,
+              "url": "https://meet.jit.si/escenario-ia-4"
+            },
+            {
+              "group": 5,
+              "url": "https://meet.jit.si/escenario-ia-5"
+            },
+            {
+              "group": 6,
+              "url": "https://meet.jit.si/escenario-ia-6"
+            }
+          ]
+        },
+        {
+          "type": "collaborative_wall",
+          "title": "Muro Colaborativo",
+          "url": "https://padlet.com/educatecno/murodesafio"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "CUARTO MOMENTO - Reflexionamos sobre la IA",
+      "description": "En este momento reflexionaremos sobre los diferentes usos y enfoques de la Inteligencia Artificial en el contexto educativo.",
+      "topics": [
+        {
+          "title": "Producir con IA",
+          "description": "Usada para resumir textos, transcribir, traducir, crear presentaciones, guías de trabajo, código de software, música, videos, etc."
+        },
+        {
+          "title": "Pensar con IA",
+          "description": "Inteligencia Artificial como colaboradora, co-diseñadora en el proceso de enseñanza y aprendizaje."
+        },
+        {
+          "title": "Darle vida a una IA",
+          "description": "Inteligencia Artificial 'entrenada' para que la interacción se dé en un contexto determinado."
+        }
+      ],
+      "conclusion": "LA CLAVE ESTÁ EN EL DIÁLOGO"
+    },
+    {
+      "id": 5,
+      "title": "QUINTO MOMENTO - ¿Qué hacemos en período asincrónico?",
+      "description": "Revisamos las tareas obligatorias que deberán completarse durante el período asincrónico.",
+      "tasks": {
+        "group": [
+          "Concluir la estación que falta con su ficha técnica",
+          "Nueva estación - les llegará mañana por el aula y foro de grupos"
+        ],
+        "individual": [
+          "Bitácora 1",
+          "Bitácora 2"
+        ]
+      }
+    }
+  ],
+  "links": {
+    "main_course": "https://ead.uncu.edu.ar/course/view.php?id=1167",
+    "grades": "https://ead.uncu.edu.ar/grade/report/user/index.php?id=1167",
+    "collaborative_wall": "https://padlet.com/educatecno/murodesafio"
+  },
+  "design": {
+    "colors": {
+      "primary": "#2E86AB",
+      "secondary": "#A23B72",
+      "accent": "#F18F01",
+      "warning": "#C73E1D",
+      "background": "#F5F5F5",
+      "text": "#333333",
+      "text_secondary": "#666666",
+      "white": "#FFFFFF"
+    },
+    "fonts": {
+      "primary": "Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      "secondary": "Roboto, Arial, sans-serif"
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "created": "2024",
+    "author": "Manus AI",
+    "description": "Página web interactiva para el curso Escenarios para aprender con IA"
+  }
+}
+

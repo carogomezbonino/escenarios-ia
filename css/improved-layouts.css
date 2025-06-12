@@ -1,0 +1,192 @@
+/* ===== ESTILOS MEJORADOS PARA BADGES GRID ===== */
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .badges-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .badges-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== ESTILOS MEJORADOS PARA BOTONES ===== */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid transparent;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    color: white;
+}
+
+.action-btn.primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.action-btn.secondary {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.action-btn.accent {
+    background: linear-gradient(135deg, #ea580c, #dc2626);
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+}
+
+/* ===== ESTILOS MEJORADOS PARA COMPLETE-BTN ===== */
+.complete-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #059669, #047857);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+    border: 2px solid transparent;
+}
+
+.complete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+    background: linear-gradient(135deg, #047857, #065f46);
+}
+
+.complete-btn.completed {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.complete-btn.completed:hover {
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+    background: linear-gradient(135deg, #b91c1c, #991b1b);
+}
+
+.complete-icon {
+    font-size: 1.1rem;
+}
+
+/* ===== LAYOUTS OPTIMIZADOS PARA COMUNICACIÓN ===== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* ===== LAYOUTS OPTIMIZADOS PARA EVALUACIÓN ===== */
+.eval-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.eval-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eval-bullet {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* ===== CANALES DE COMUNICACIÓN GRID ===== */
+.channels-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.channel-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.channel-emoji {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .features-grid,
+    .eval-features,
+    .channels-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-btn,
+    .complete-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+

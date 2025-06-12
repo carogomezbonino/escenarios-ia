@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escenarios para aprender con IA - Segundo Encuentro Sincrónico</title>
+    <meta name="description" content="Página web interactiva para el segundo encuentro sincrónico del curso Escenarios para aprender con IA. Incluye sistema de progreso, tragamonedas de grupos y navegación intuitiva.">
+    <meta name="keywords" content="inteligencia artificial, educación, IA, curso, docentes, aprendizaje, tecnología educativa">
+    <meta name="author" content="Escenarios para aprender con IA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Escenarios para aprender con IA - Segundo Encuentro">
+    <meta property="og:description" content="Página web interactiva para el segundo encuentro sincrónico del curso de IA educativa.">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="Escenarios para aprender con IA - Segundo Encuentro">
+    <meta property="twitter:description" content="Página web interactiva para el segundo encuentro sincrónico del curso de IA educativa.">
+    <meta property="twitter:image" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/primer-momento.css">
+    <link rel="stylesheet" href="css/casino-tragamonedas.css">
+    <link rel="stylesheet" href="css/improved-layouts.css">
+    <link rel="stylesheet" href="css/visual-elements.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#2E86AB">
+    <meta name="msapplication-navbutton-color" content="#2E86AB">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Disable automatic phone number detection -->
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+    <!-- Header Principal -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">Escenarios para aprender con IA</h1>
+                <p class="subtitle">Segundo Encuentro Sincrónico</p>
+                <div class="header-meta">
+                    <span class="date">Fecha del encuentro</span>
+                    <span class="duration">Duración estimada: 2 horas</span>
+                </div>
+            </div>
+            
+            <!-- Indicador de Progreso Global -->
+            <div class="global-progress">
+                <div class="progress-header">
+                    <h3>Progreso del Encuentro</h3>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="globalProgressFill"></div>
+                </div>
+                <div class="progress-stats">
+                    <span id="completedMoments">0</span> de <span id="totalMoments">5</span> momentos completados
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación Principal -->
+    <nav class="main-navigation" id="mainNav">
+        <div class="container">
+            <!-- Botón de menú móvil -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Lista de navegación -->
+            <ul class="nav-list" id="navList">
+                <li class="nav-item">
+                    <a href="#momento-1" class="nav-link" data-moment="1">
+                        <span class="nav-checkbox">
+                            <input type="checkbox" id="check-momento-1" class="moment-checkbox">
+                            <label for="check-momento-1"></label>
+                        </span>
+                        <span class="nav-text">Momento 1: Revisamos nuestro camino</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#momento-2" class="nav-link" data-moment="2">
+                        <span class="nav-checkbox">
+                            <input type="checkbox" id="check-momento-2" class="moment-checkbox">
+                            <label for="check-momento-2"></label>
+                        </span>
+                        <span class="nav-text">Momento 2: Jugamos y dialogamos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#momento-3" class="nav-link" data-moment="3">
+                        <span class="nav-checkbox">
+                            <input type="checkbox" id="check-momento-3" class="moment-checkbox">
+                            <label for="check-momento-3"></label>
+                        </span>
+                        <span class="nav-text">Momento 3: Desafío grupal</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#momento-4" class="nav-link" data-moment="4">
+                        <span class="nav-checkbox">
+                            <input type="checkbox" id="check-momento-4" class="moment-checkbox">
+                            <label for="check-momento-4"></label>
+                        </span>
+                        <span class="nav-text">Momento 4: Reflexionamos sobre la IA</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#momento-5" class="nav-link" data-moment="5">
+                        <span class="nav-checkbox">
+                            <input type="checkbox" id="check-momento-5" class="moment-checkbox">
+                            <label for="check-momento-5"></label>
+                        </span>
+                        <span class="nav-text">Momento 5: Período asincrónico</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Primer Momento - Rediseñado -->
+            <section id="momento-1" class="moment-section active">
+                <div class="moment-header">
+                    <div class="moment-icon">
+                        <span class="icon-number">1</span>
+                        <span class="icon-symbol">🔍</span>
+                    </div>
+                    <h2 class="moment-title">Primero - Revisamos nuestro camino</h2>
+                    <p class="moment-description">
+                        En este primer momento, revisaremos el camino recorrido hasta ahora en nuestro curso, 
+                        explorando las bitácoras, el trabajo grupal, los modos de comunicación y evaluación.
+                    </p>
+                </div>
+
+                <!-- Sección: Diálogo con uno mismo -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">📝</div>
+                        <h3>Diálogo con uno mismo ¿qué es la bitácora?</h3>
+                    </div>
+                    <div class="section-content">
+                        <p class="section-description">
+                            Espacio personal y reflexivo donde se cruzan experiencias, pensamientos y emociones 
+                            vividas en el trayecto formativo con inteligencia artificial.
+                        </p>
+                        
+                        <div class="questions-block">
+                            <h4><span class="question-icon">❓</span> Preguntas clave:</h4>
+                            <ul class="questions-list">
+                                <li><span class="bullet">•</span> ¿Cuál es su objetivo?</li>
+                                <li><span class="bullet">•</span> ¿Cuántas hay y cuántas debo completar?</li>
+                                <li><span class="bullet">•</span> ¿Alguien comparte la suya y nos cuenta?</li>
+                                <li><span class="bullet">•</span> ¿Cómo es la retroalimentación de la misma?</li>
+                            </ul>
+                        </div>
+
+                        <div class="scenarios-block">
+                            <h4><span class="scenario-icon">🎯</span> Los tres escenarios de relación con la IA:</h4>
+                            
+                            <!-- Diagrama visual de los escenarios -->
+                            <div class="visual-diagram">
+                                <div class="diagram-title">
+                                    <span>📊</span>
+                                    <span>Proceso de Aprendizaje con IA</span>
+                                </div>
+                                <div class="process-flow">
+                                    <div class="process-step">
+                                        <div class="process-icon">🔧</div>
+                                        <div class="step-title">Hacer con IA</div>
+                                        <div class="step-description">Explorar herramientas</div>
+                                    </div>
+                                    <div class="process-step">
+                                        <div class="process-icon">💭</div>
+                                        <div class="step-title">Pensar con IA</div>
+                                        <div class="step-description">Reflexionar implicancias</div>
+                                    </div>
+                                    <div class="process-step">
+                                        <div class="process-icon">✨</div>
+                                        <div class="step-title">Crear con IA</div>
+                                        <div class="step-description">Diseñar soluciones</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="scenarios-grid">
+                                <div class="scenario-card hacer">
+                                    <div class="scenario-header">
+                                        <span class="scenario-emoji">🔧</span>
+                                        <strong>Hacer con IA</strong>
+                                    </div>
+                                    <p>donde exploramos herramientas y sus funciones.</p>
+                                </div>
+                                <div class="scenario-card pensar">
+                                    <div class="scenario-header">
+                                        <span class="scenario-emoji">💭</span>
+                                        <strong>Pensar con IA</strong>
+                                    </div>
+                                    <p>donde reflexionamos sobre sus implicancias pedagógicas, éticas y sociales.</p>
+                                </div>
+                                <div class="scenario-card crear">
+                                    <div class="scenario-header">
+                                        <span class="scenario-emoji">✨</span>
+                                        <strong>Crear con IA</strong>
+                                    </div>
+                                    <p>donde proyectamos, diseñamos y compartimos nuevas formas de enseñar y aprender.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="badges-block">
+                            <h4><span class="badge-icon">🏆</span> Las insignias:</h4>
+                            
+                            <!-- Estadísticas visuales de insignias -->
+                            <div class="stats-visual">
+                                <div class="stat-item">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label">Insignias Totales</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Escenarios IA</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label">Bitácoras</span>
+                                </div>
+                            </div>
+                            
+                            <div class="badges-grid">
+                                <div class="badge-item">
+                                    <div class="badge-visual explorador">
+                                        <span class="badge-emoji">🔍</span>
+                                        <div class="badge-number">1</div>
+                                    </div>
+                                    <div class="badge-text">
+                                        <strong>Explorador/a del pasado y presente</strong>
+                                        <span>en IA como continuum</span>
+                                    </div>
+                                </div>
+                                <div class="badge-item">
+                                    <div class="badge-visual creador">
+                                        <span class="badge-emoji">🎨</span>
+                                        <div class="badge-number">2</div>
+                                    </div>
+                                    <div class="badge-text">
+                                        <strong>Creador/a con IA</strong>
+                                        <span>en Diálogos generativos con la IA</span>
+                                    </div>
+                                </div>
+                                <div class="badge-item">
+                                    <div class="badge-visual dialogador">
+                                        <span class="badge-emoji">💬</span>
+                                        <div class="badge-number">3</div>
+                                    </div>
+                                    <div class="badge-text">
+                                        <strong>Dialogador/dialogante entre pares</strong>
+                                        <span>En Diálogos generativos entre docentes</span>
+                                    </div>
+                                </div>
+                                <div class="badge-item">
+                                    <div class="badge-visual reflexivo">
+                                        <span class="badge-emoji">🤔</span>
+                                        <div class="badge-number">4</div>
+                                    </div>
+                                    <div class="badge-text">
+                                        <strong>Reflexivo/a expandido/a</strong>
+                                        <span>En Diálogos generativos con nosotros mismos</span>
+                                    </div>
+                                </div>
+                                <div class="badge-item">
+                                    <div class="badge-visual redes">
+                                        <span class="badge-emoji">🌐</span>
+                                        <div class="badge-number">5</div>
+                                    </div>
+                                    <div class="badge-text">
+                                        <strong>Diálogo en redes</strong>
+                                        <span>en Diálogos generativos para expandir en redes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <a href="https://ead.uncu.edu.ar/mod/assign/view.php?id=16888" target="_blank" class="action-btn primary">
+                                <span class="btn-icon">👁️</span>
+                                Ver ejemplo de bitácora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Diálogo con colegas -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">👥</div>
+                        <h3>Diálogo con colegas y con la IA</h3>
+                    </div>
+                    <div class="section-content">
+                        <p class="section-description">
+                            El trabajo grupal es paralelo y simultáneo al diálogo individual en las bitácoras.
+                        </p>
+                        
+                        <div class="questions-block">
+                            <h4><span class="question-icon">❓</span> Preguntas clave:</h4>
+                            <ul class="questions-list">
+                                <li><span class="bullet">•</span> ¿Cuál es la propuesta de trabajo en grupo?</li>
+                                <li><span class="bullet">•</span> ¿Cómo sé en qué grupo estoy? ¿Cómo me sumo al grupo?</li>
+                                <li><span class="bullet">•</span> ¿Cuántos trabajos grupales deberé hacer?</li>
+                                <li><span class="bullet">•</span> ¿En qué consiste trabajar en las estaciones?</li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-box">
+                            <div class="highlight-icon">⚡</div>
+                            <div class="highlight-content">
+                                <p>Esta dinámica es parte de la <strong>actividad grupal asincrónica</strong>, en la que deberán dialogar con sus colegas sobre una herramienta de IA, explorarla y completar la ficha técnica que luego compartirán en el muro colaborativo.</p>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <a href="https://ead.uncu.edu.ar/course/view.php?id=1167&section=3" target="_blank" class="action-btn secondary">
+                                <span class="btn-icon">👥</span>
+                                Ver ejemplo de trabajo grupal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Modos de comunicación -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">💬</div>
+                        <h3>Modos de comunicación en el trayecto</h3>
+                    </div>
+                    <div class="section-content">
+                        <div class="telegram-section">
+                            <h4><span class="telegram-icon">📱</span> ¿Por qué Telegram?</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <span class="feature-icon">👥</span>
+                                    <span>Permite la creación de grupos con hasta 200.000 miembros</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📂</span>
+                                    <span>Función innovadora que divide las conversaciones en subcategorías/temas</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📎</span>
+                                    <span>Permite compartir archivos grandes (hasta 2GB cada uno)</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">💻</span>
+                                    <span>Versión web, app y aplicación para computadora</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">⏰</span>
+                                    <span>Programar mensajes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="channels-section">
+                            <h4><span class="channel-icon">📡</span> Canales de comunicación:</h4>
+                            <div class="channels-list">
+                                <div class="channel-item">
+                                    <span class="channel-emoji">🏢</span>
+                                    <span>Grupo grande con sus temas</span>
+                                </div>
+                                <div class="channel-item">
+                                    <span class="channel-emoji">👥</span>
+                                    <span>Grupos pequeños</span>
+                                </div>
+                                <div class="channel-item">
+                                    <span class="channel-emoji">🔒</span>
+                                    <span>Foro privado para cada grupo</span>
+                                </div>
+                                <div class="channel-item">
+                                    <span class="channel-emoji">💬</span>
+                                    <span>Mensajería privada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Modos de evaluación -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">📊</div>
+                        <h3>Modos de evaluación</h3>
+                    </div>
+                    <div class="section-content">
+                        <div class="evaluation-block">
+                            <h4><span class="eval-icon">✅</span> Características de la evaluación:</h4>
+                            <div class="eval-features">
+                                <div class="eval-item">
+                                    <span class="eval-bullet">📈</span>
+                                    <span>Formativa, de proceso</span>
+                                </div>
+                                <div class="eval-item">
+                                    <span class="eval-bullet">👤</span>
+                                    <span>Instancias individuales (3 de 5 bitácoras)</span>
+                                </div>
+                                <div class="eval-item">
+                                    <span class="eval-bullet">👥</span>
+                                    <span>Instancias grupales (participación en las estaciones)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <a href="https://ead.uncu.edu.ar/grade/report/user/index.php?id=1167" target="_blank" class="action-btn accent">
+                                <span class="btn-icon">📊</span>
+                                Ver calificaciones en el aula
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="moment-footer">
+                    <button class="complete-btn" onclick="progressManager.toggleMoment(1)">
+                        <span class="complete-icon">✓</span>
+                        Marcar como completado
+                    </button>
+                </div>
+            </section>
+
+            <!-- Sección: Diálogo con colegas -->
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">👥</div>
+                    <h3>Diálogo con colegas y con la IA</h3>
+                </div>
+                <div class="section-content">
+                    <p class="section-description">
+                        El trabajo grupal es paralelo y simultáneo al diálogo individual en las bitácoras.
+                    </p>
+                    
+                    <div class="questions-block">
+                        <h4><span class="question-icon">❓</span> Preguntas clave:</h4>
+                        <ul class="questions-list">
+                            <li><span class="bullet">•</span> ¿Cuál es la propuesta de trabajo en grupo?</li>
+                            <li><span class="bullet">•</span> ¿Cómo sé en qué grupo estoy? ¿Cómo me sumo al grupo?</li>
+                            <li><span class="bullet">•</span> ¿Cuántos trabajos grupales deberé hacer?</li>
+                            <li><span class="bullet">•</span> ¿En qué consiste trabajar en las estaciones?</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <div class="highlight-icon">⚡</div>
+                        <div class="highlight-content">
+                            <p>Esta dinámica es parte de la <strong>actividad grupal asincrónica</strong>, en la que deberán dialogar con sus colegas sobre una herramienta de IA, explorarla y completar la ficha técnica que luego compartirán en el muro colaborativo.</p>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <a href="https://ead.uncu.edu.ar/course/view.php?id=1167&section=3" target="_blank" class="action-btn secondary">
+                            <span class="btn-icon">👥</span>
+                            Ver ejemplo de trabajo grupal
+                        </a>
+                        <a href="https://padlet.com/educatecno/murodesafio" target="_blank" class="action-btn accent">
+                            <span class="btn-icon">🗂️</span>
+                            Acceder al Muro de Desafíos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección: Modos de comunicación -->
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">💬</div>
+                    <h3>Modos de comunicación en el trayecto</h3>
+                </div>
+                <div class="section-content">
+                    <div class="telegram-section">
+                        <h4><span class="telegram-icon">📱</span> ¿Por qué Telegram?</h4>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <span class="feature-icon">👥</span>
+                                <span>Permite la creación de grupos con hasta 200.000 miembros</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📂</span>
+                                <span>Función innovadora que divide las conversaciones en subcategorías/temas</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📎</span>
+                                <span>Permite compartir archivos grandes (hasta 2GB cada uno)</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">💻</span>
+                                <span>Versión web, app y aplicación para computadora</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">⏰</span>
+                                <span>Programar mensajes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="channels-section">
+                        <h4><span class="channel-icon">📡</span> Canales de comunicación:</h4>
+                        <div class="channels-list">
+                            <div class="channel-item">
+                                <span class="channel-emoji">🏢</span>
+                                <span>Grupo grande con sus temas</span>
+                            </div>
+                            <div class="channel-item">
+                                <span class="channel-emoji">👥</span>
+                                <span>Grupos pequeños</span>
+                            </div>
+                            <div class="channel-item">
+                                <span class="channel-emoji">🔒</span>
+                                <span>Foro privado para cada grupo</span>
+                            </div>
+                            <div class="channel-item">
+                                <span class="channel-emoji">💬</span>
+                                <span>Mensajería privada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección: Modos de evaluación -->
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">📊</div>
+                    <h3>Modos de evaluación</h3>
+                </div>
+                <div class="section-content">
+                    <div class="evaluation-block">
+                        <h4><span class="eval-icon">✅</span> Características de la evaluación:</h4>
+                        <div class="eval-features">
+                            <div class="eval-item">
+                                <span class="eval-bullet">📈</span>
+                                <span>Formativa, de proceso</span>
+                            </div>
+                            <div class="eval-item">
+                                <span class="eval-bullet">👤</span>
+                                <span>Instancias individuales (3 de 5 bitácoras)</span>
+                            </div>
+                            <div class="eval-item">
+                                <span class="eval-bullet">👥</span>
+                                <span>Instancias grupales (participación en las estaciones)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <a href="https://ead.uncu.edu.ar/grade/report/user/index.php?id=1167" target="_blank" class="action-btn accent">
+                            <span class="btn-icon">📊</span>
+                            Ver calificaciones en el aula
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment-footer">
+                <button class="complete-btn" onclick="progressManager.toggleMoment(1)">
+                    <span class="complete-icon">✓</span>
+                    Marcar como completado
+                </button>
+            </div>
+        </section>
+
+        <!-- Momento 2: Jugamos y dialogamos -->
+            <section class="moment-section" id="momento-2" data-moment="2">
+                <div class="moment-header">
+                    <h2 class="moment-title">SEGUNDO MOMENTO - Jugamos? y luego dialogamos</h2>
+                    <button class="complete-moment-btn" data-moment="2">
+                        <span class="btn-icon">✓</span>
+                        Marcar como completado
+                    </button>
+                </div>
+                
+                <div class="moment-description">
+                    <p>Trabajaremos de manera "colectiva" para resolver desafíos que pondrán a prueba nuestra capacidad de distinguir entre productos culturales creados por humanos y aquellos generados por IA.</p>
+                    <p>Inicialmente jugaremos contra reloj, en una tarea de observación atenta. En la última parte será una propuesta de co-creación, en la cual deberán elegir uno de tres desafíos para crear y jugar con el curso.</p>
+                </div>
+
+                <div class="moment-activities">
+                    <div class="activity-card">
+                        <h3>🎯 Desafío de Observación</h3>
+                        <p>Actividad contra reloj para distinguir contenido humano vs. IA</p>
+                        <div class="activity-timer">
+                            <div class="timer-display">
+                                <span class="timer-minutes">00</span>:<span class="timer-seconds">00</span>
+                            </div>
+                            <button class="timer-btn start-timer">Iniciar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <h3>🤝 Co-creación Colaborativa</h3>
+                        <p>Elección de uno de tres desafíos para crear y jugar con el curso</p>
+                        <div class="challenge-options">
+                            <button class="challenge-btn" data-challenge="1">Desafío 1</button>
+                            <button class="challenge-btn" data-challenge="2">Desafío 2</button>
+                            <button class="challenge-btn" data-challenge="3">Desafío 3</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Momento 3: Desafío grupal -->
+            <section class="moment-section" id="momento-3" data-moment="3">
+                <div class="moment-header">
+                    <h2 class="moment-title">TERCER MOMENTO - Ahora Desafío grupal!!! A crear</h2>
+                    <button class="complete-moment-btn" data-moment="3">
+                        <span class="btn-icon">✓</span>
+                        Marcar como completado
+                    </button>
+                </div>
+                
+                <div class="moment-description">
+                    <p>Aquí crearemos un tragamonedas interactivo para sortear números de grupos que trabajarán juntos. El sistema tiene tres barras verticales con números del 1 al 18, y realizará 6 sorteos para que todos participen.</p>
+                </div>
+
+                <!-- Tragamonedas Estilo Casino -->
+                <div id="slot-machine"></div>
+
+                <div class="moment-footer">
+                    <button class="complete-btn" onclick="progressManager.toggleMoment(3)">
+                        <span class="complete-icon">✓</span>
+                        Marcar como completado
+                    </button>
+                </div>
+            </section>
+
+            <!-- Momento 4: Reflexionamos sobre la IA -->
+            <section class="moment-section" id="momento-4" data-moment="4">
+                <div class="moment-header">
+                    <h2 class="moment-title">CUARTO MOMENTO - Reflexionamos sobre la IA</h2>
+                    <button class="complete-moment-btn" data-moment="4">
+                        <span class="btn-icon">✓</span>
+                        Marcar como completado
+                    </button>
+                </div>
+                
+                <div class="moment-description">
+                    <p>En este momento reflexionaremos sobre los diferentes usos y enfoques de la Inteligencia Artificial en el contexto educativo.</p>
+                </div>
+
+                <div class="reflection-topics">
+                    <div class="topic-card">
+                        <h3>🛠️ Producir con IA</h3>
+                        <p>Usada para resumir textos, transcribir, traducir, crear presentaciones, guías de trabajo, código de software, música, videos, etc.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h3>🤔 Pensar con IA</h3>
+                        <p>Inteligencia Artificial como colaboradora, co-diseñadora en el proceso de enseñanza y aprendizaje.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h3>🎭 Darle vida a una IA</h3>
+                        <p>Inteligencia Artificial "entrenada" para que la interacción se dé en un contexto determinado.</p>
+                    </div>
+                </div>
+
+                <div class="key-conclusion">
+                    <h3>🔑 Conclusión Clave</h3>
+                    <p class="conclusion-text">LA CLAVE ESTÁ EN EL DIÁLOGO</p>
+                </div>
+            </section>
+
+            <!-- Momento 5: Período asincrónico -->
+            <section class="moment-section" id="momento-5" data-moment="5">
+                <div class="moment-header">
+                    <h2 class="moment-title">QUINTO MOMENTO - ¿Qué hacemos en período asincrónico?</h2>
+                    <button class="complete-moment-btn" data-moment="5">
+                        <span class="btn-icon">✓</span>
+                        Marcar como completado
+                    </button>
+                </div>
+                
+                <div class="moment-description">
+                    <p>Revisamos las tareas obligatorias que deberán completarse durante el período asincrónico.</p>
+                </div>
+
+                <div class="async-tasks">
+                    <div class="task-category">
+                        <h3>👥 Tareas Grupales</h3>
+                        <ul class="task-list">
+                            <li class="task-item">
+                                <span class="task-icon">📋</span>
+                                Concluir la estación que falta con su ficha técnica
+                            </li>
+                            <li class="task-item">
+                                <span class="task-icon">🆕</span>
+                                Nueva estación - les llegará mañana por el aula y foro de grupos
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="task-category">
+                        <h3>👤 Tareas Individuales</h3>
+                        <ul class="task-list">
+                            <li class="task-item">
+                                <span class="task-icon">📝</span>
+                                Bitácora 1
+                            </li>
+                            <li class="task-item">
+                                <span class="task-icon">📝</span>
+                                Bitácora 2
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Escenarios para aprender con IA</h4>
+                    <p>Curso de formación docente en inteligencia artificial aplicada a la educación.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces útiles</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://ead.uncu.edu.ar/course/view.php?id=1167" target="_blank">Aula Virtual</a></li>
+                        <li><a href="https://ead.uncu.edu.ar/grade/report/user/index.php?id=1167" target="_blank">Calificaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Para consultas sobre el curso, utiliza los canales de comunicación establecidos en Telegram.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Escenarios para aprender con IA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/casino-tragamonedas.js"></script>
+</body>
+</html>
+
